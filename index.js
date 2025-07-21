@@ -1,0 +1,86 @@
+// // // document.getElementById("text-count").innerText="1";
+// // let myage=0;
+// // console.log(myage);
+// let myage,mydogage
+// myage=1;
+// mydogage=7;
+// console.log(myage*mydogage)
+// let bonouspoints=50
+// console.log(bonouspoints)
+// bonouspoints=bonouspoints+50
+// console.log(bonouspoints)
+// bonouspoints=bonouspoints-25
+// console.log(bonouspoints)
+// bonouspoints=bonouspoints+70
+// console.log(bonouspoints)
+// let firstname="arun",lastname="kumar"
+// let fullname=firstname+lastname
+// console.log(fullname)
+// let firstname="Arun", lastname="kumar"
+// // let fullname=firstname+lastname
+
+// function greeting(){
+//     console.log("hi there"+" "+firstname+" "+lastname)
+// }
+// // greeting()
+// let mypoints=3
+
+// function add3points(){
+//     mypoints+=3
+// }
+// function removal(){
+//     mypoints-=1
+// }
+// add3points()
+// add3points()
+// add3points()
+// removal()
+// removal()
+
+
+
+// console.log(mypoints)
+// function purchasing(){
+//     console.log("button clicked")
+//     document.getElementById("error").innerText="something went wrong";
+// }
+// let result=document.getElementById("error")
+// console.log(result)
+
+
+
+// function purchasing(){
+//     console.log("button clicked")
+//     result.textContent="something went wrong try again later"
+// }
+// let result=document.getElementById("error")
+
+
+
+
+
+
+// console.log("10"+"20") // "1020"
+// console.log(10+20) // 30
+// console.log("10"+20) // "1020"
+// console.log(10+"20") // "1020"
+
+
+
+
+
+let count=0
+function clicked(){
+    count+=1
+    console.log("Increment button "+count+" clicked")
+    document.getElementById("count").innerText=count;
+}
+
+let save=document.getElementById("save-btn")
+let data=document.getElementById("data")
+function saved (){
+    let countStr=count+" - "
+    console.log("Save button clicked")
+    data.textContent+=countStr;
+
+}

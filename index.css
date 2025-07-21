@@ -1,0 +1,83 @@
+/* .content-img{
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+  background-color: red;
+}
+.content-button{
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 16px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.content-text{
+    padding-left: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+    
+    
+   
+     */
+/*   
+body{
+  background-image: url('../images/chetri.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+ */
+/* 
+body{
+  background-color: antiquewhite;
+}
+.content>h1{
+  padding-top: 10px;
+  margin-left: 100px;
+}
+.content>h5{
+  margin-left: 100px;
+  font-size: large;
+}
+.content-section{
+  display: flex;
+  flex-direction: row;
+  width: 1300px;
+  height: 200px;
+  border: 2px solid black;
+  margin-left: 100px; 
+} */
+ .content {
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.content> button { 
+  background-color: antiquewhite;
+  color: black;
+  border : 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 200px  ;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#save-btn{
+  background-color: green;
+  color: white;
+  border : 1px solid black;
+  border-radius: 3px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 200px  ;
+  cursor: pointer;
+}
