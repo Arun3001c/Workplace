@@ -67,20 +67,26 @@
 
 
 
-
-
+let data=document.getElementById("data")
+let change=document.getElementById("count")
+let valued=document.getElementById("id1")
 let count=0
+let finalcount = 0
 function clicked(){
     count+=1
     console.log("Increment button "+count+" clicked")
-    document.getElementById("count").innerText=count;
+    change.innerText = "the count is " +  count;
 }
 
-let save=document.getElementById("save-btn")
-let data=document.getElementById("data")
+// let save=document.getElementById("save-btn")
 function saved (){
-    let countStr=count+" - "
+    let countStr=count +"-"
     console.log("Save button clicked")
-    data.textContent+=countStr;
+    data.innerText +=countStr;
+    change.innerText = "the count is 0";
+
+    finalcount =count+finalcount
+    valued.innerText = "the count is " + finalcount;
+    count=0
 
 }
