@@ -67,26 +67,74 @@
 
 
 
-let data=document.getElementById("data")
-let change=document.getElementById("count")
-let valued=document.getElementById("id1")
-let count=0
-let finalcount = 0
-function clicked(){
-    count+=1
-    console.log("Increment button "+count+" clicked")
-    change.innerText = "the count is " +  count;
+// let data=document.getElementById("data")
+// let change=document.getElementById("count")
+// let count=0
+
+// function clicked(){
+//     count+=1
+//     console.log("Increment button "+count+" clicked")
+//     change.innerText = "the count is " +  count;
+// }
+
+// // let save=document.getElementById("save-btn")
+// function saved (){
+//     let countStr=count +"-"
+//     console.log("Save button clicked")
+//     data.innerText +=countStr;
+//     change.innerText = "the count is 0";
+//     count=0
+// }
+
+
+
+// let data=document.getElementById("data")
+// let change=document.getElementById("count")
+// let valued=document.getElementById("id1")
+// let count=0
+// let finalcount = 0
+// function clicked(){
+//     count+=1
+//     console.log("Increment button "+count+" clicked")
+//     change.innerText = "the count is " +  count;
+// }
+
+// function saved (){
+//     let countStr=count +"-"
+//     console.log("Save button clicked")
+//     data.innerText +=countStr;
+//     change.innerText = "the count is 0";    
+//     finalcount =count+finalcount
+//     valued.innerText = "the count is " + finalcount;
+//     count=0
+
+// }
+
+
+
+let num1=8
+let num2=2  
+document.getElementById("num1-el").innerText=num1
+document.getElementById("num2-el").innerText=num2
+
+function add(){
+    let result=num1+num2
+    document.getElementById("result").innerText="Sum: "+result
+}
+function sub(){
+    let result=num1-num2
+    document.getElementById("result").innerText="Difference: "+result
+}
+function div(){
+    let result=num1/num2
+    document.getElementById("result").innerText="Quotient: "+result
 }
 
-// let save=document.getElementById("save-btn")
-function saved (){
-    let countStr=count +"-"
-    console.log("Save button clicked")
-    data.innerText +=countStr;
-    change.innerText = "the count is 0";
-
-    finalcount =count+finalcount
-    valued.innerText = "the count is " + finalcount;
-    count=0
-
+function mul(){
+    let result=num1*num2
+    document.getElementById("result").innerText="Product: "+result
 }
+
+
+
+
