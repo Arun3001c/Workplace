@@ -179,58 +179,68 @@
 // processingOrder()
 // processingOrder()
 
-let firstcard = 10
-let secondcard = 10
-let hasBlackjack = false
-let isAlive = true
-let sum = firstcard + secondcard
-let message = ""
-let messageEl = document.getElementById("message-el")
-let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
-let check =false
+// let firstcard = 10
+// let secondcard = 10
+// let hasBlackjack = false
+// let isAlive = true
+// let sum = firstcard + secondcard
+// let message = ""
+// let messageEl = document.getElementById("message-el")
+// let sumEl = document.getElementById("sum-el")
+// let cardsEl = document.getElementById("cards-el")
+// let check =false
 
 
-function startGame() {
-    console.log("Started the game")
-    renderGame()
-}
+// function startGame() {
+//     console.log("Started the game")
+//     renderGame()
+// }
 
-function renderGame() {
-console.log("rendered game")
-if(!check){
-cardsEl.innerText = "cards: " +firstcard + ", " + secondcard
-check = true
-}
+// function renderGame() {
+// console.log("rendered game")
+// if(!check){
+// cardsEl.innerText = "cards: " +firstcard + ", " + secondcard
+// check = true
+// }
 
-sumEl.textContent = "Sum: " + sum
-if(sum <= 20) {
-    message = "do you want to draw a new card?"
-    // console.log(message)
-    // console.log("do you want to draw a new card?")
-}
-else if(sum === 21) {
-    message = "Blackjack!"
-    // console.log(message)
-    // console.log("Blackjack!")
-    hasBlackjack = true
-    isAlive = false
-} else {
-    message = "You are out of the game!"    
-    // console.log("You are out of the game!")
-    isAlive = false
-}
-// console.log(message)
-console.log("Is alive: " + isAlive)
-messageEl.textContent = message
-}
+// sumEl.textContent = "Sum: " + sum
+// if(sum <= 20) {
+//     message = "do you want to draw a new card?"
+//     // console.log(message)
+//     // console.log("do you want to draw a new card?")
+// }
+// else if(sum === 21) {
+//     message = "Blackjack!"
+//     // console.log(message)
+//     // console.log("Blackjack!")
+//     hasBlackjack = true
+//     isAlive = false
+// } else {
+//     message = "You are out of the game!"    
+//     // console.log("You are out of the game!")
+//     isAlive = false
+// }
+// // console.log(message)
+// console.log("Is alive: " + isAlive)
+// messageEl.textContent = message
+// }
 
 
-function drawNewCard() {
-    console.log("you taken a new card")
-    let newCardValue = 1
-    sum += newCardValue
-    cardsEl.textContent += ", " + newCardValue
-    sumEl.textContent = "Sum: " + sum
-    renderGame()
-}
+// function drawNewCard() {
+//     console.log("you taken a new card")
+//     let newCardValue = 1
+//     sum += newCardValue
+//     cardsEl.textContent += ", " + newCardValue
+//     sumEl.textContent = "Sum: " + sum
+//     renderGame()
+// }
+
+
+
+let featuredposts =[
+    "How to learn JavaScript",
+    "Understanding Asynchronous JavaScript",
+    "JavaScript Best Practices for Beginners"
+]
+console.log(featuredposts)
+
