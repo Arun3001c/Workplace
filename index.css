@@ -81,7 +81,7 @@ body{
   width: 200px  ;
   cursor: pointer;
 } */
-
+/* 
 .content {
   color: red;
   text-align: center;
@@ -91,7 +91,7 @@ body{
 }
 .content> button { 
   background-color: antiquewhite;
-  color: black;
+  color: black; 
   border : 1px solid black;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -108,4 +108,36 @@ body{
   padding: 8px;
   border-bottom: 2px solid black;
 
+} */
+
+body {
+background-image: url("../images/table.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+text-align: center;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+color: white;
 }
+button{
+  background-color: goldenrod;
+  color: #016f32;
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom:4px;
+  cursor: pointer;
+}
+
+h1 {
+color: goldenrod;
+}
+h5{
+  font-style: italic;
+}
+
+

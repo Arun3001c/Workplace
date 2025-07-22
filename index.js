@@ -112,29 +112,125 @@
 
 
 
-let num1=8
-let num2=2  
-document.getElementById("num1-el").innerText=num1
-document.getElementById("num2-el").innerText=num2
+// let num1=8
+// let num2=2  
+// document.getElementById("num1-el").innerText=num1
+// document.getElementById("num2-el").innerText=num2
 
-function add(){
-    let result=num1+num2
-    document.getElementById("result").innerText="Sum: "+result
+// function add(){
+//     let result=num1+num2
+//     document.getElementById("result").innerText="Sum: "+result
+// }
+// function sub(){
+//     let result=num1-num2
+//     document.getElementById("result").innerText="Difference: "+result
+// }
+// function div(){
+//     let result=num1/num2
+//     document.getElementById("result").innerText="Quotient: "+result
+// }
+
+// function mul(){
+//     let result=num1*num2
+//     document.getElementById("result").innerText="Product: "+result
+// }
+
+
+
+// let age = 100
+// if (age < 100) {
+//     console.log("Not eligible")
+// }
+// else if(age ===100){
+//     console.log("here is your birthday card from the king")
+// }
+// else{
+//     console.log("not eligible, you have already gotten one")
+// }
+
+
+
+// let firstcard =10
+// let secondcard = 11
+
+// let sum = firstcard + secondcard
+
+// if(sum<=20){
+//     console.log("do you want to draw a new card?")
+// }
+// else if(sum===21){
+//     console.log("Blackjack!")
+// }
+// else{
+//     console.log("You are out of the game!")
+// }
+
+
+// let hasDiscount = true
+
+// function processingOrder() {
+//     if (hasDiscount) {
+//         console.log("discount applied to your food")
+//         hasDiscount = false
+//     } else {
+//         console.log("no discount added to your food")
+//     }
+// }
+// processingOrder()
+// processingOrder()
+
+let firstcard = 10
+let secondcard = 10
+let hasBlackjack = false
+let isAlive = true
+let sum = firstcard + secondcard
+let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+let check =false
+
+
+function startGame() {
+    console.log("Started the game")
+    renderGame()
 }
-function sub(){
-    let result=num1-num2
-    document.getElementById("result").innerText="Difference: "+result
-}
-function div(){
-    let result=num1/num2
-    document.getElementById("result").innerText="Quotient: "+result
-}
 
-function mul(){
-    let result=num1*num2
-    document.getElementById("result").innerText="Product: "+result
+function renderGame() {
+console.log("rendered game")
+if(!check){
+cardsEl.innerText = "cards: " +firstcard + ", " + secondcard
+check = true
 }
 
+sumEl.textContent = "Sum: " + sum
+if(sum <= 20) {
+    message = "do you want to draw a new card?"
+    // console.log(message)
+    // console.log("do you want to draw a new card?")
+}
+else if(sum === 21) {
+    message = "Blackjack!"
+    // console.log(message)
+    // console.log("Blackjack!")
+    hasBlackjack = true
+    isAlive = false
+} else {
+    message = "You are out of the game!"    
+    // console.log("You are out of the game!")
+    isAlive = false
+}
+// console.log(message)
+console.log("Is alive: " + isAlive)
+messageEl.textContent = message
+}
 
 
-
+function drawNewCard() {
+    console.log("you taken a new card")
+    let newCardValue = 1
+    sum += newCardValue
+    cardsEl.textContent += ", " + newCardValue
+    sumEl.textContent = "Sum: " + sum
+    renderGame()
+}
