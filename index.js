@@ -268,24 +268,43 @@
 
 
 
-let firstcard = 10
-let secondcard = 10
-let cards = [firstcard, secondcard] // Array to hold the cards
-console.log(cards)
+let cards
+let isAlive
 let hasBlackjack = false
-let isAlive = true
-let sum = firstcard + secondcard
+let sum = 0
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let check =false
 
+function getRandomCard() {
+    let randomNumber = Math.floor (Math.random() * 13) + 1 // Generate a random number between 1 and 13
+    if(randomNumber >10) {
+        return 10 // If the card is Ace, return 11
+    }
+    else if(randomNumber === 1) {
+        return 11 // If the card is Ace, return 11
+    }
+    else{
+        return randomNumber // Return the random number as is
+    }
+}
 
 function startGame() {
+        
+    let firstcard = getRandomCard() // Function to get a random card value
+    let secondcard = getRandomCard() // Function to get a random card valu
     console.log("Started the game")
+    cards= [firstcard, secondcard] // Array to hold the cards
+    console.log(cards)
+    isAlive= true
+    sum = firstcard + secondcard // Calculate the initial sum of the cards
     renderGame()
+
 }
+
+
 
 function renderGame() {
 console.log("rendered game")
@@ -322,7 +341,7 @@ messageEl.textContent = message
 
 function drawNewCard() {
     console.log("you taken a new card")
-    let newCardValue = 1
+    let newCardValue = getRandomCard() // Get a new random card value
     sum += newCardValue
     // cardsEl.textContent += ", " + newCardValue
     // sumEl.textContent = "Sum: " + sum
