@@ -244,9 +244,24 @@
 // ]
 // console.log(featuredposts)
 
-let details = [
-    "arun",
-    20,
-    true
+// let details = [
+//     "arun",
+//     20,
+//     true
+// ]
+// console.log(details)
+
+let featuredposts = [
+    "How to learn JavaScript",
+    "Understanding Asynchronous JavaScript",
+    "JavaScript Best Practices for Beginners"
 ]
-console.log(details)
+
+let newpost = "How to learn JavaScript in 2023"
+featuredposts.push(newpost)
+console.log(featuredposts)
+let anotherpost = 20
+featuredposts.push(anotherpost)
+console.log(featuredposts)
+featuredposts.pop()
+console.log(featuredposts)
