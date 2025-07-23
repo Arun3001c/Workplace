@@ -237,10 +237,16 @@
 
 
 
-let featuredposts =[
-    "How to learn JavaScript",
-    "Understanding Asynchronous JavaScript",
-    "JavaScript Best Practices for Beginners"
-]
-console.log(featuredposts)
+// let featuredposts =[
+//     "How to learn JavaScript",
+//     "Understanding Asynchronous JavaScript",
+//     "JavaScript Best Practices for Beginners"
+// ]
+// console.log(featuredposts)
 
+let details = [
+    "arun",
+    20,
+    true
+]
+console.log(details)
