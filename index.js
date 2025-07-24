@@ -276,6 +276,12 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
+let player = {
+    name: "Arun",
+    chips: 145
+}
+playerEl.textContent = player.name + ": $" + player.chips // Display player's name and chips
 let check =false
 
 function getRandomCard() {
@@ -316,8 +322,10 @@ cardsEl.textContent = "Cards: " // Reset the cards display
 for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent +=  cards[i] +" " // Display all cards in the array
 }
+
 sumEl.textContent = "Sum: " + sum
 if(sum <= 20) {
+    isAlive = true // Player is still alive
     message = "do you want to draw a new card?"
     // console.log(message)
     // console.log("do you want to draw a new card?")
@@ -340,13 +348,17 @@ messageEl.textContent = message
 
 
 function drawNewCard() {
+    
     console.log("you taken a new card")
-    let newCardValue = getRandomCard() // Get a new random card value
+    if(isAlive && !hasBlackjack) { // Check if the player is alive and hasn't won
+        let newCardValue = getRandomCard() // Get a new random card value
     sum += newCardValue
     // cardsEl.textContent += ", " + newCardValue
     // sumEl.textContent = "Sum: " + sum
     cards.push(newCardValue) // Add the new card to the array
     console.log(cards)
+    }
+
     renderGame()
 }
 

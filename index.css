@@ -4,6 +4,8 @@
   border: 2px solid black;
   margin: 20px;
   background-color: red;
+  align-items: center;
+  justify-self: center;
 }
 .content-button{
     background: white;
@@ -13,6 +15,8 @@
     border-radius: 20px;
     margin-top: 10px;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
 }
 .content-text{
@@ -20,12 +24,15 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+body{
+  justify-content: center;
+  align-items: center;
+}
 
-
-    
+     */
     
    
-     */
+    
 /*   
 body{
   background-image: url('../images/chetri.png');
