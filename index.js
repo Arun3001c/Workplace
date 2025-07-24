@@ -366,3 +366,16 @@
 //     renderGame()
 // }
 
+
+
+let fighters = ["🐉", "🐥", "🐊","💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷","🐆", "🦕", "🦁"]
+
+let stage=document.getElementById("stage-el")
+let fightbutton=document.getElementById("fightbutton")
+
+fightbutton.addEventListener("click", function(){
+    let randomIndex1 =Math.floor(Math.random()*fighters.length)
+    let randomIndex2 =Math.floor(Math.random()*fighters.length)
+    stage.textContent = fighters[randomIndex1] + " vs " + fighters[randomIndex2]
+
+})

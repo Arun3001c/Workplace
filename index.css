@@ -147,4 +147,39 @@ h5{
   font-style: italic;
 } */
 
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  color: #e98a1d;
+}
+    
+h1 {
+    text-shadow: 0px 3px 0px black;
+    line-height: 24px;
+    transform: rotate(-9deg);
+}
+
+#stage-el {
+    width: 100%;
+    height: 60px;
+    padding: 30px 0;
+    font-size: 50px;
+    margin: 0;
+}
+
+button{
+  background-color: goldenrod;
+  width: 200px;
+  padding: 10px ;
+  padding-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin: 20px;
+  font-size: 20px;
+  font-family: inherit;
+}
 
