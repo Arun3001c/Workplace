@@ -268,97 +268,101 @@
 
 
 
-let cards
-let isAlive
-let hasBlackjack = false
-let sum = 0
-let message = ""
-let messageEl = document.getElementById("message-el")
-let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
-let playerEl = document.getElementById("player-el")
-let player = {
-    name: "Arun",
-    chips: 145
-}
-playerEl.textContent = player.name + ": $" + player.chips // Display player's name and chips
-let check =false
-
-function getRandomCard() {
-    let randomNumber = Math.floor (Math.random() * 13) + 1 // Generate a random number between 1 and 13
-    if(randomNumber >10) {
-        return 10 // If the card is Ace, return 11
-    }
-    else if(randomNumber === 1) {
-        return 11 // If the card is Ace, return 11
-    }
-    else{
-        return randomNumber // Return the random number as is
-    }
-}
-
-function startGame() {
-        
-    let firstcard = getRandomCard() // Function to get a random card value
-    let secondcard = getRandomCard() // Function to get a random card valu
-    console.log("Started the game")
-    cards= [firstcard, secondcard] // Array to hold the cards
-    console.log(cards)
-    isAlive= true
-    sum = firstcard + secondcard // Calculate the initial sum of the cards
-    renderGame()
-
-}
-
-
-
-function renderGame() {
-console.log("rendered game")
-// if(!check){
-// cardsEl.innerText = "cards: " +firstcard + ", " + secondcard
-// check = true
+// let cards
+// let isAlive
+// let hasBlackjack = false
+// let sum = 0
+// let message = ""
+// let messageEl = document.getElementById("message-el")
+// let sumEl = document.getElementById("sum-el")
+// let cardsEl = document.getElementById("cards-el")
+// let playerEl = document.getElementById("player-el")
+// let player = {
+//     name: "Arun",
+//     chips: 145,
+//     sayHello: function(){
+//         console.log("Hello, my name is " + this.name + " and I have $" + this.chips)
+//     }
 // }
-cardsEl.textContent = "Cards: " // Reset the cards display
-for (let i = 0; i < cards.length; i++) {
-    cardsEl.textContent +=  cards[i] +" " // Display all cards in the array
-}
+// player.sayHello() // Call the sayHello method to display player's name and chips
+// playerEl.textContent = player.name + ": $" + player.chips // Display player's name and chips
+// let check =false
 
-sumEl.textContent = "Sum: " + sum
-if(sum <= 20) {
-    isAlive = true // Player is still alive
-    message = "do you want to draw a new card?"
-    // console.log(message)
-    // console.log("do you want to draw a new card?")
-}
-else if(sum === 21) {
-    message = "Blackjack!"
-    // console.log(message)
-    // console.log("Blackjack!")
-    hasBlackjack = true
-    isAlive = false
-} else {
-    message = "You are out of the game!"    
-    // console.log("You are out of the game!")
-    isAlive = false
-}
-// console.log(message)
-console.log("Is alive: " + isAlive)
-messageEl.textContent = message
-}
+// function getRandomCard() {
+//     let randomNumber = Math.floor (Math.random() * 13) + 1 // Generate a random number between 1 and 13
+//     if(randomNumber >10) {
+//         return 10 // If the card is Ace, return 11
+//     }
+//     else if(randomNumber === 1) {
+//         return 11 // If the card is Ace, return 11
+//     }
+//     else{
+//         return randomNumber // Return the random number as is
+//     }
+// }
+
+// function startGame() {
+        
+//     let firstcard = getRandomCard() // Function to get a random card value
+//     let secondcard = getRandomCard() // Function to get a random card valu
+//     console.log("Started the game")
+//     cards= [firstcard, secondcard] // Array to hold the cards
+//     console.log(cards)
+//     isAlive= true
+//     sum = firstcard + secondcard // Calculate the initial sum of the cards
+//     renderGame()
+
+// }
 
 
-function drawNewCard() {
+
+// function renderGame() {
+// console.log("rendered game")
+// // if(!check){
+// // cardsEl.innerText = "cards: " +firstcard + ", " + secondcard
+// // check = true
+// // }
+// cardsEl.textContent = "Cards: " // Reset the cards display
+// for (let i = 0; i < cards.length; i++) {
+//     cardsEl.textContent +=  cards[i] +" " // Display all cards in the array
+// }
+
+// sumEl.textContent = "Sum: " + sum
+// if(sum <= 20) {
+//     isAlive = true // Player is still alive
+//     message = "do you want to draw a new card?"
+//     // console.log(message)
+//     // console.log("do you want to draw a new card?")
+// }
+// else if(sum === 21) {
+//     message = "Blackjack!"
+//     // console.log(message)
+//     // console.log("Blackjack!")
+//     hasBlackjack = true
+//     isAlive = false
+// } else {
+//     message = "You are out of the game!"    
+//     // console.log("You are out of the game!")
+//     isAlive = false
+// }
+// // console.log(message)
+// console.log("Is alive: " + isAlive)
+// messageEl.textContent = message
+// }
+
+
+// function drawNewCard() {
     
-    console.log("you taken a new card")
-    if(isAlive && !hasBlackjack) { // Check if the player is alive and hasn't won
-        let newCardValue = getRandomCard() // Get a new random card value
-    sum += newCardValue
-    // cardsEl.textContent += ", " + newCardValue
-    // sumEl.textContent = "Sum: " + sum
-    cards.push(newCardValue) // Add the new card to the array
-    console.log(cards)
-    }
+//     console.log("you taken a new card")
+//     if(isAlive && !hasBlackjack) { // Check if the player is alive and hasn't won
+//         let newCardValue = getRandomCard() // Get a new random card value
+//     sum += newCardValue
+//     // cardsEl.textContent += ", " + newCardValue
+//     // sumEl.textContent = "Sum: " + sum
+//     cards.push(newCardValue) // Add the new card to the array
+//     console.log(cards)
+//     }
 
-    renderGame()
-}
+//     renderGame()
+// }
 
