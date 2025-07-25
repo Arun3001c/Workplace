@@ -146,7 +146,7 @@ color: goldenrod;
 h5{
   font-style: italic;
 } */
-
+/* 
 body{
   margin: 0;
   padding: 0;
@@ -182,4 +182,24 @@ button{
   font-size: 20px;
   font-family: inherit;
 }
+ */
 
+ 
+ body{
+  background: whitesmoke;
+  padding: 40px;
+  text-align: center;
+ }
+
+ #apple-el{
+  background: lightcoral;
+    border-radius: 10px;
+    height: 30px;
+    margin: 10px 0;
+ }
+ #orange-el{
+  background: lightsalmon;
+    border-radius: 10px;
+    height: 30px;
+    margin: 10px 0;
+ } 

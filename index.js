@@ -368,14 +368,33 @@
 
 
 
-let fighters = ["🐉", "🐥", "🐊","💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷","🐆", "🦕", "🦁"]
+// let fighters = ["🐉", "🐥", "🐊","💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷","🐆", "🦕", "🦁"]
 
-let stage=document.getElementById("stage-el")
-let fightbutton=document.getElementById("fightbutton")
+// let stage=document.getElementById("stage-el")
+// let fightbutton=document.getElementById("fightbutton")
 
-fightbutton.addEventListener("click", function(){
-    let randomIndex1 =Math.floor(Math.random()*fighters.length)
-    let randomIndex2 =Math.floor(Math.random()*fighters.length)
-    stage.textContent = fighters[randomIndex1] + " vs " + fighters[randomIndex2]
+// fightbutton.addEventListener("click", function(){
+//     let randomIndex1 =Math.floor(Math.random()*fighters.length)
+//     let randomIndex2 =Math.floor(Math.random()*fighters.length)
+//     stage.textContent = fighters[randomIndex1] + " vs " + fighters[randomIndex2]
 
-})
+// })
+
+
+
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+let appleEl = document.getElementById("apple-el")
+let orangeEl = document.getElementById("orange-el")
+
+function countFruit() {
+for(let i = 0; i < fruit.length; i++) {
+    if(fruit[i] === "🍊") {
+        orangeEl.textContent += "🍊" // Append an orange emoji for each orange found
+    }
+    else{
+        appleEl.textContent += fruit[i] // Append the fruit emoji to the fruit element
+    }
+
+}
+}
+countFruit() // Call the function to count and display the fruits
