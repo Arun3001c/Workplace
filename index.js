@@ -382,19 +382,19 @@
 
 
 
-let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
-let appleEl = document.getElementById("apple-el")
-let orangeEl = document.getElementById("orange-el")
+// let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+// let appleEl = document.getElementById("apple-el")
+// let orangeEl = document.getElementById("orange-el")
 
-function countFruit() {
-for(let i = 0; i < fruit.length; i++) {
-    if(fruit[i] === "🍊") {
-        orangeEl.textContent += "🍊" // Append an orange emoji for each orange found
-    }
-    else{
-        appleEl.textContent += fruit[i] // Append the fruit emoji to the fruit element
-    }
+// function countFruit() {
+// for(let i = 0; i < fruit.length; i++) {
+//     if(fruit[i] === "🍊") {
+//         orangeEl.textContent += "🍊" // Append an orange emoji for each orange found
+//     }
+//     else{
+//         appleEl.textContent += fruit[i] // Append the fruit emoji to the fruit element
+//     }
 
-}
-}
-countFruit() // Call the function to count and display the fruits
+// }
+// }
+// countFruit() // Call the function to count and display the fruits
