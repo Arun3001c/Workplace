@@ -420,13 +420,47 @@
 // function totalTime() {
 //        console.log(lap1 + lap2 + lap3)
 // }
-// totalTime()
-let lapsCompleted = 0
-function increment() {
-    lapsCompleted = lapsCompleted + 1
-    console.log(lapsCompleted)
-    document.getElementById("value").innerText= lapsCompleted
+// // totalTime()
+// let lapsCompleted = 0
+// function increment() {
+//     lapsCompleted = lapsCompleted + 1
+//     console.log(lapsCompleted)
+//     document.getElementById("value").innerText= lapsCompleted
 
+// }
+
+
+// function saveLead() {
+//     console.log("Button clicked")
+    
+// }
+let myLeads = [];
+let inputEl = document.getElementById("input-el");
+let inputBtn = document.getElementById("input-btn");
+// let displayEl=document.getElementById("display-el");
+const ulEl= document.getElementById("ul-el");
+inputBtn.addEventListener("click", function() {
+    // displayEl.innerText=""
+    console.log("Button clicked");
+    myLeads.push(inputEl.value); // Add the input value to the myLeads array
+    console.log(myLeads); // Log the updated myLeads array
+    inputEl.value = ""; // Clear the input field after adding the lead
+    // ulEl.textContent = myLeads.join(", ");
+  renderLeads(); // Call the renderLeads function to display the leads
+});
+
+
+function renderLeads() {
+listItem = "" // Create a new list item element
+ulEl.innerHTML = ""; // Clear the unordered list before displaying new leads
+
+for (let i = 0; i < myLeads.length; i++) {
+    // listItem += "<li>" + myLeads[i] + "</li>"; // Display each lead in the unordered list
+    listItem += `<li>
+    <a href="${myLeads[i]}" target="_blank">
+    ${myLeads[i]}
+    </a>    
+    </li>`; // Create a link for each lead
 }
-
-
+ulEl.innerHTML = listItem; // Set the inner HTML of the unordered list to the list items
+}
